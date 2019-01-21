@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { formatTime } from '../utilities';
 
 class PlayerBar extends Component {
 	render() {
@@ -16,7 +17,7 @@ class PlayerBar extends Component {
 				</button>
 				</section>
 				<section id="time-control">
-					<div className="current-time">Current Time {this.props.currentTime}</div>
+					<div className="current-time">Current Time {formatTime(this.props.currentTime)}</div>
 					<input 
 						type="range" 
 						className="seek-bar" 
@@ -26,7 +27,7 @@ class PlayerBar extends Component {
 						step="0.01"
 						onChange={this.props.handleTimeChange}
 					/>
-					<div className="total-time">Duration {this.props.duration}</div>
+					<div className="total-time">Duration {formatTime(this.props.duration)}</div>
 				</section>
 				<section id="volume-control"> 
 					<div className="current-time">Volume {this.props.currentVolume}</div>
