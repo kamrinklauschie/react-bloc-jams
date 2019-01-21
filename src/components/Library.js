@@ -10,7 +10,7 @@ class Library extends Component {
 
 	render() {
 		return (
-			<section className='library'>
+			<section className='library' class="card bg-light mb-3">
 				{
 					this.state.albums.map( (album, index) => 
 						<Link to={`/album/${album.slug}`} key={index}>
